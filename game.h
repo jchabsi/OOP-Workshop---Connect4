@@ -17,7 +17,7 @@ class Game {
         Player* player2; //points to the second player (association)    
     public:
         Game(){}; //no args empty contructor 
-        Game(Player *player1, Player *player2); //Constructor with args (overloading) 
+        Game(Player* player1, Player* player2); //Constructor with args (overloading) 
         void SetPlayers(Player *player1, Player *player2); //Sets the game players (polimorfism)
         int PlayGame(); // game loop    
 };

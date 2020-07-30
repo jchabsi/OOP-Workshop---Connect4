@@ -23,7 +23,7 @@ Board::Board() {
 // Adds a piece to the board according to the game rules
 bool Board::Put(int col, int piece) {    
     int row = 0;
-    for (row; row < 6; row++) {
+    for (; row < 6; row++) {
         if (board[row][col] != 0) {           
             break;
         }
@@ -96,7 +96,7 @@ bool Board::Connected4(int piece) {
                 connected = 1;
                 posH = col;
                 posV = row;
-                while (++posH < 7 && --posV < 6 && board[posV][posH] == piece){
+                while (++posH < 7 && --posV >= 0 && board[posV][posH] == piece){
                     connected++;
                     cout << "conected: " << connected << endl;
                     if(connected == 4) return true;

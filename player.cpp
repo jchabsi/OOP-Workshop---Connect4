@@ -6,7 +6,6 @@
 #include <iostream>
 #include <string>
 #include <cstdlib>
-#include "board.h"
 
 using namespace std;
 
@@ -63,7 +62,7 @@ int PlayerBot::Play() {
     cout << "I still don't have AI, I play very bad..." << endl;
 
     int col = 0;
-    if (lastCol = -1) {
+    if (lastCol == -1) {
         //before doing this we might analyse whether we should play defensive or offensive
         col = rand() % 6;
         return col;

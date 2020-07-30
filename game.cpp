@@ -14,17 +14,14 @@ using namespace std;
 //args:
 //Player *p1 - first player
 //Player *p2 - second player
-Game::Game(Player *p1, Player *p2)  {
+Game::Game(Player* p1, Player* p2)  {
     SetPlayers(p1, p2);
 }
 
 //Sets the game players
-void Game::SetPlayers(Player * p1, Player * p2) {
+void Game::SetPlayers(Player* p1, Player* p2) {
     player1 = p1; //Associates the first player
-    player2 = p2; //Associates the second player
-
-    p1->SetBoard(&board); //assciates the board to the first player
-    p2->SetBoard(&board); //associates the board to the second player
+    player2 = p2; //Associates the second player    
 }
 
 //Game Loop
